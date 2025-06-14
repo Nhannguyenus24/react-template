@@ -1,71 +1,123 @@
-# React + TypeScript + Vite
+# Frontend Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React TypeScript template built with Vite, featuring Material-UI, Redux Toolkit, and other powerful tools for building scalable web applications.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡️ Vite 6.x - Next Generation Frontend Tooling
+- ⚛️ React 19.x with TypeScript
+- 🎨 Material-UI (MUI) for beautiful UI components
+- 📦 Redux Toolkit for state management
+- 🔄 React Router for routing
+- 📝 React Hook Form for form handling
+- ✅ Zod for schema validation
+- 📅 Date-fns for date manipulation
+- 🛠 ESLint & Prettier for code quality
+- 🐶 Husky for git hooks
+- 🐳 Docker support for containerization
 
-## Expanding the ESLint configuration
+## 📋 Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 20.x or later
+- npm or yarn package manager
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠 Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
-|-- src/
-    |-- apis/               # Dùng để khởi tạo các api function
-    |-- assets/             # Chứa các file tài nguyên (images, fonts, icons, etc.)
-    |-- components/         # Chứa các components
-    |-- constants/          # Chứa các file constant
-    |-- types/              # Dùng để chứa các file định nghĩa type
-    |-- hooks/              # Chứa hook custom
-    |-- layouts/            # Chứa các layout component
-    |-- pages/              # Chứa các trang của dự án
-    |-- lib/                # Chứa các file config của thư viện bên ngoài
-    |-- providers/          # Chứa các providers (theme, store, etc.)
-    |-- schemas/            # Chứa các schemas validate ( zod, yup, ...)
-    |-- stores/             # Quản lý state (Redux, MobX, etc.)
-    |-- styles/             # Quản lý các css global hoặc thư viện scss
-    |-- utils/              # Chứa các hàm dùng chung của dự án
-    |-- App.tsx             # Định nghĩa root file
-    |-- routes.tsx          # Định nghĩa router
+
+## 🚀 Development
+
+To start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## 🏗 Building for Production
+
+To build the application for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The build output will be in the `dist` directory.
+
+## 🐳 Docker Deployment
+
+Build and run using Docker:
+
+```bash
+# Build the image
+docker build -t frontend-app .
+
+# Run the container
+docker run -p 80:80 frontend-app
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/         # Static assets (images, fonts, etc.)
+├── components/     # Reusable UI components
+├── constants/      # Application constants
+├── hooks/         # Custom React hooks
+├── layouts/       # Layout components
+├── pages/         # Page components
+├── schemas/       # Zod validation schemas
+├── stores/        # Redux store configuration
+├── styles/        # Global styles and theme
+├── utils/         # Utility functions
+├── config.ts      # Application configuration
+├── main.tsx       # Application entry point
+└── routes.tsx     # Route definitions
+```
+
+## 📦 Key Dependencies
+
+### Core Dependencies
+
+- `@mui/material` & `@mui/icons-material` - Material-UI components
+- `@reduxjs/toolkit` & `react-redux` - State management
+- `react-router-dom` - Routing
+- `react-hook-form` - Form handling
+- `zod` - Schema validation
+- `axios` - HTTP client
+- `date-fns` - Date manipulation
+- `lodash` - Utility functions
+
+### Development Dependencies
+
+- `typescript` - TypeScript support
+- `vite` - Build tool
+- `eslint` & `prettier` - Code quality
+- `husky` & `lint-staged` - Git hooks
+- `@vitejs/plugin-react` - Vite React plugin
+
+## 🔧 Code Style
+
+The project uses ESLint and Prettier for code formatting. The configuration is set up to enforce consistent code style across the project.
+
+## 📝 License
+
+[Add your license information here]
