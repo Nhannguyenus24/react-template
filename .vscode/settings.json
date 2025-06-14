@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Cài đặt formatter là prettier
+  "editor.formatOnSave": true, // Cài đặt khi lưu code ( Ctrl + S ) sẽ tự động thực thi prettier
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit" // Cài đặt khi lưu code ( Ctrl + S ) sẽ tự động thực thi eslint
+  }
+}
